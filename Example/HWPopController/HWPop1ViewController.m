@@ -3,7 +3,7 @@
 //  HWPopController_Example
 //
 //  Created by heath wang on 2019/5/22.
-//  Copyright © 2019 wangcongling. All rights reserved.
+//  Copyright © 2019 Heath Wang. All rights reserved.
 //
 
 #import "HWPop1ViewController.h"
@@ -21,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.contentSizeInPop = CGSizeMake(250, 300);
+    self.contentSizeInPopWhenLandscape = CGSizeMake(300, 200);
     
     self.view.backgroundColor = [UIColor purpleColor];
 

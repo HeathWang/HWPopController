@@ -2,8 +2,8 @@
 //  HWViewController.m
 //  HWPopController
 //
-//  Created by wangcongling on 05/21/2019.
-//  Copyright (c) 2019 wangcongling. All rights reserved.
+//  Created by Heath Wang on 05/21/2019.
+//  Copyright (c) 2019 Heath Wang. All rights reserved.
 //
 
 #import "HWViewController.h"
@@ -31,7 +31,7 @@
 
 - (void)test {
     HWPop1ViewController *pop1ViewController = [HWPop1ViewController new];
-//    [pop1ViewController popupWithPopType:HWPopTypeGrowIn dismissType:HWDismissTypeGrowOut dismissOnBackgroundTouch:YES];
+    [pop1ViewController popupWithPopType:HWPopTypeGrowIn dismissType:HWDismissTypeGrowOut dismissOnBackgroundTouch:YES];
     HWPopController *popController = [[HWPopController alloc] initWithRootViewController:pop1ViewController];
     popController.popPosition = HWPopPositionTop;
     [popController presentInViewController:self];
