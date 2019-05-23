@@ -1,0 +1,16 @@
+PODS:
+  - HWPopController (1.0.0)
+
+DEPENDENCIES:
+  - HWPopController (from `../`)
+
+EXTERNAL SOURCES:
+  HWPopController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HWPopController: 65139d1bc1eff4fff218b9ffa1f69b8317cc021d
+
+PODFILE CHECKSUM: 19a33eaaaab6a32b1ad3247e013be97e44a27b34
+
+COCOAPODS: 1.6.1

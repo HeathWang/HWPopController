@@ -1,0 +1,6 @@
+framework module HWPopController {
+  umbrella header "HWPopController-umbrella.h"
+
+  export *
+  module * { export * }
+}
