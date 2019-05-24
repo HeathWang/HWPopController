@@ -27,13 +27,13 @@
 
 <div style="text-align: center"><table><tr>
 <td style="text-align: center">
-<img src="screenshoot1.gif" width="250" />
+<img src="https://github.com/HeathWang/HWPopController/blob/master/screenshoot1.gif" width="250" />
 </td>
 <td style="text-align: center">
-<img src="screenshoot2.gif" width="250"/>
+<img src="https://github.com/HeathWang/HWPopController/blob/master/screenshoot2.gif" width="250"/>
 </td>
 <td style="text-align: center">
-<img src="screenshoot3.gif" width="250"/>
+<img src="https://github.com/HeathWang/HWPopController/blob/master/screenshoot3.gif" width="250"/>
 </td>
 </tr></table></div>
 
