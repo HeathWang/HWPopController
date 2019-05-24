@@ -25,7 +25,17 @@
 
 ## Screen Shot
 
-![example](screenshot.gif)
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="screenshoot1.gif" width="250" />
+</td>
+<td style="text-align: center">
+<img src="screenshoot2.gif" width="250"/>
+</td>
+<td style="text-align: center">
+<img src="screenshoot3.gif" width="250"/>
+</td>
+</tr></table></div>
 
 ## Features
 * Support popup UIViewController.

@@ -13,6 +13,7 @@
 #import "HWTopBarViewController.h"
 #import "HWBottomAuthViewController.h"
 #import "HWCenterViewController.h"
+#import "HWAnimationConfigListViewController.h"
 
 @interface HWViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -55,7 +56,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:{
-
+            HWAnimationConfigListViewController *animationConfigListViewController = [HWAnimationConfigListViewController new];
+            [self.navigationController pushViewController:animationConfigListViewController animated:YES];
         }
             break;
         case 1:{
@@ -109,7 +111,7 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@"Pop Animation Style (todo)", @"Bottom Sheet", @"Top Bar", @"Full Dialog", @"Center"];
+        _titles = @[@"Pop Animation Style", @"Bottom Sheet", @"Top Bar", @"Full Dialog", @"Center"];
     }
     return _titles;
 }

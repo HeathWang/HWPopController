@@ -26,6 +26,8 @@
 		7E73D2042296A4F500D02E82 /* HWTopBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D2032296A4F500D02E82 /* HWTopBarViewController.m */; };
 		7E73D2072296B38700D02E82 /* HWBottomAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D2062296B38700D02E82 /* HWBottomAuthViewController.m */; };
 		7E73D20A22978AA400D02E82 /* HWCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D20922978AA400D02E82 /* HWCenterViewController.m */; };
+		7E73D20D2297C38100D02E82 /* HWCatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D20C2297C38100D02E82 /* HWCatViewController.m */; };
+		7E73D2102297C61000D02E82 /* HWPickTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D20F2297C61000D02E82 /* HWPickTypeViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C0DC889E32E893436B1186FD /* Pods_HWPopController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C1CC41B89B43EC4E8C8EC3 /* Pods_HWPopController_Example.framework */; };
 		FFA8C589062ED6989C232A91 /* Pods_HWPopController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3F556EFAFC49965CF9FA04 /* Pods_HWPopController_Tests.framework */; };
@@ -73,6 +75,10 @@
 		7E73D2062296B38700D02E82 /* HWBottomAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWBottomAuthViewController.m; sourceTree = "<group>"; };
 		7E73D20822978AA400D02E82 /* HWCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCenterViewController.h; sourceTree = "<group>"; };
 		7E73D20922978AA400D02E82 /* HWCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCenterViewController.m; sourceTree = "<group>"; };
+		7E73D20B2297C38100D02E82 /* HWCatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCatViewController.h; sourceTree = "<group>"; };
+		7E73D20C2297C38100D02E82 /* HWCatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCatViewController.m; sourceTree = "<group>"; };
+		7E73D20E2297C61000D02E82 /* HWPickTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWPickTypeViewController.h; sourceTree = "<group>"; };
+		7E73D20F2297C61000D02E82 /* HWPickTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWPickTypeViewController.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8761CA90FC335ACDECEAFE2D /* Pods-HWPopController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopController_Example.release.xcconfig"; path = "Target Support Files/Pods-HWPopController_Example/Pods-HWPopController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		908B4B1C682A978A1DD5EED8 /* HWPopController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HWPopController.podspec; path = ../HWPopController.podspec; sourceTree = "<group>"; };
@@ -218,6 +224,10 @@
 			children = (
 				7E73D1FC22969D2B00D02E82 /* HWAnimationConfigListViewController.h */,
 				7E73D1FD22969D2B00D02E82 /* HWAnimationConfigListViewController.m */,
+				7E73D20B2297C38100D02E82 /* HWCatViewController.h */,
+				7E73D20C2297C38100D02E82 /* HWCatViewController.m */,
+				7E73D20E2297C61000D02E82 /* HWPickTypeViewController.h */,
+				7E73D20F2297C61000D02E82 /* HWPickTypeViewController.m */,
 			);
 			path = AnimationStyle;
 			sourceTree = "<group>";
@@ -412,8 +422,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* HWAppDelegate.m in Sources */,
+				7E73D20D2297C38100D02E82 /* HWCatViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* HWViewController.m in Sources */,
 				7E73D20A22978AA400D02E82 /* HWCenterViewController.m in Sources */,
+				7E73D2102297C61000D02E82 /* HWPickTypeViewController.m in Sources */,
 				7E73D2012296A00C00D02E82 /* HWFullDialogViewController.m in Sources */,
 				7E73D1FE22969D2B00D02E82 /* HWAnimationConfigListViewController.m in Sources */,
 				7E73D2072296B38700D02E82 /* HWBottomAuthViewController.m in Sources */,
