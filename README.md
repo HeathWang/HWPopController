@@ -23,6 +23,10 @@
 
 `HWPopController` can popup `UIViewController` with `multiple animations`, custom pop size in portrait / landscape screen. Popup position can be `top/center/bottom`. And you can define your own popup animations.
 
+## Screen Shot
+
+![example](screenshot.gif)
+
 ## Features
 * Support popup UIViewController.
 * Support 12 kinds of pop & dismiss animations.
@@ -38,7 +42,7 @@ HWPopController is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'HWPopController', '~> 1.0.1'
+pod 'HWPopController', '~> 1.0.3'
 ```
 
 ## How to use

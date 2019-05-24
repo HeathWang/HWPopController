@@ -117,7 +117,7 @@
 		4C9B2014C24ADA03537F3B21DB6735E4 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		5C6C501769E2DA3CE22CE4BA9B61BD90 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		5D981A16A96A62CB64AEABCF4AD4705B /* Pods-HWPopController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HWPopController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		65EB8F5C9938B0688AE8532220D8B97A /* Pods_HWPopController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HWPopController_Tests.framework; path = "Pods-HWPopController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65EB8F5C9938B0688AE8532220D8B97A /* Pods_HWPopController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HWPopController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A813B85B3FC857AF4D36ABA5C381B9A /* HWPop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HWPop.h; path = HWPopController/Classes/HWPop.h; sourceTree = "<group>"; };
 		6C6624EA0EDFA9F72CF6A18E889D0D25 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		6E0D4BCAC744DA83EFA636356088C4CD /* HWPopControllerAnimationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HWPopControllerAnimationProtocol.h; sourceTree = "<group>"; };
@@ -127,22 +127,22 @@
 		78526D2C8FDDA6A9A4034A969422E45B /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		7E145DFF9033B5609061BCCC32A734C7 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		7FE6E1911D1AD84C9A840CDAC71DD377 /* HWDefaultPopAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HWDefaultPopAnimator.m; sourceTree = "<group>"; };
-		8476F04E038BB559B98387666C3A9A24 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8476F04E038BB559B98387666C3A9A24 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		883188D9E929CEC3A8B1B4486DFF8B66 /* Pods-HWPopController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HWPopController_Tests.modulemap"; sourceTree = "<group>"; };
 		8919BC5B7E7FAD09B11CC6B77F89EB6A /* HWPopController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HWPopController.m; sourceTree = "<group>"; };
 		89286B607043EF52DC1580A838A8D2F4 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
 		8EF30F780E2BD14DF24481BDC5498546 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		8F5ED37B3EC3B8BE160012CA9C25500F /* Pods-HWPopController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HWPopController_Example-umbrella.h"; sourceTree = "<group>"; };
 		97026FDE056E7276C3F4288BCADC469F /* Pods-HWPopController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HWPopController_Example-dummy.m"; sourceTree = "<group>"; };
-		979FCA803942B2D11FB9F17F7669DB0B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		979FCA803942B2D11FB9F17F7669DB0B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DFD4286E9402BFCF1A5042CBA515863 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		A0EE7F78B3BD7C286ECD8E89FBD08EA3 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		A0F61305C1F3A1243065800D90E4E7EF /* Pods-HWPopController_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HWPopController_Tests-Info.plist"; sourceTree = "<group>"; };
-		A2B1F94E4CB49467FB1E67845B4B233D /* HWPopController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HWPopController.framework; path = HWPopController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B1F94E4CB49467FB1E67845B4B233D /* HWPopController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HWPopController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FCC23CC6FDFD59C3B2AF606149748C /* HWPopController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HWPopController-umbrella.h"; sourceTree = "<group>"; };
 		A3EC0121FDBC530599046D1A12C9E879 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
-		A5E0B9768449F72580AE015363CB19A1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A5E0B9768449F72580AE015363CB19A1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A7AB2C5387E74ABC44E8E7C25CFFDADB /* Pods-HWPopController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HWPopController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A8312851BB4629AF3AE2012B44A03662 /* Pods-HWPopController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HWPopController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB8780E61D2F67CA6C8B83BF8FAD7AD9 /* HWPopController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HWPopController-Info.plist"; sourceTree = "<group>"; };
@@ -150,12 +150,12 @@
 		B9E1765D5FDF647DC197616202F0975D /* HWPopTransitioningDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HWPopTransitioningDelegate.h; sourceTree = "<group>"; };
 		BA1930EA5A0D0E7DC87664879DB6D032 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		BFFCBA103FB66BC35E4DA4CA41ECE113 /* Pods-HWPopController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HWPopController_Tests-umbrella.h"; sourceTree = "<group>"; };
-		C097C17D4B3E2887BC4CE8F0CA4E3FBB /* Pods_HWPopController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HWPopController_Example.framework; path = "Pods-HWPopController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C097C17D4B3E2887BC4CE8F0CA4E3FBB /* Pods_HWPopController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HWPopController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B818D35C86765A99363DC0270CC55E /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		C90AFA7D97C3A2DD41A167B3F09C234B /* HWDefaultPopAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HWDefaultPopAnimator.h; sourceTree = "<group>"; };
 		CE1F404471E734FD2E91B9AA72EE50D7 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
 		D98729D388525C1741E1AF5083C0B910 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		E93F16A82FC6F7E64F56184F04F45192 /* HWPopController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HWPopController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E93F16A82FC6F7E64F56184F04F45192 /* HWPopController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HWPopController.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		EA1A75BDF62A9A325D26FBCC20E4D84D /* HWPopController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HWPopController.h; sourceTree = "<group>"; };
 		EB8479D9C513F8576FC9B0317008497E /* HWPopControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HWPopControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
 		EC6F744A3DA1C0EE12D10CB82411B05E /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
@@ -350,7 +350,6 @@
 				4C9B2014C24ADA03537F3B21DB6735E4 /* ViewController+MASAdditions.m */,
 				3383BD59F0CA45F38B2C4285AD319AC1 /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -823,8 +822,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
