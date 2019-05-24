@@ -23,17 +23,6 @@ static NSMutableSet *_retainedPopControllers;
 
 @implementation HWPopContainerViewController
 
-//- (UIStatusBarStyle)preferredStatusBarStyle {
-//    if (self.childViewControllers.count || !self.presentingViewController) {
-//        return [super preferredStatusBarStyle];
-//    }
-//    return [self.presentingViewController preferredStatusBarStyle];
-//}
-
-//- (UIViewController *)childViewControllerForStatusBarStyle {
-//    return self.childViewControllers.lastObject;
-//}
-
 @end
 
 @interface HWPopController ()
@@ -75,7 +64,7 @@ static NSMutableSet *_retainedPopControllers;
 
 #pragma mark - public method
 
-- (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
+- (instancetype)initWithViewController:(UIViewController *)rootViewController {
     self = [self init];
     if (self) {
         self.topViewController = rootViewController;
@@ -93,20 +82,24 @@ static NSMutableSet *_retainedPopControllers;
 - (void)presentInViewController:(UIViewController *)viewController completion:(nullable void (^)(void))completion {
     if (self.presented)
         return;
-
-    [self setupObserver];
-
-    [_retainedPopControllers addObject:self];
-
-    viewController = viewController.tabBarController ?: viewController;
-
-    if (@available(iOS 11.0, *)) {
-        if (!self.didOverrideSafeAreaInsets) {
-            self.safeAreaInsets = viewController.view.safeAreaInsets;
+    
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self setupObserver];
+        
+        [_retainedPopControllers addObject:self];
+        
+        UIViewController *VC = viewController.tabBarController ?: viewController;
+        
+        if (@available(iOS 11.0, *)) {
+            if (!self.didOverrideSafeAreaInsets) {
+                self.safeAreaInsets = viewController.view.safeAreaInsets;
+            }
         }
-    }
-
-    [viewController presentViewController:self.containerViewController animated:YES completion:completion];
+        
+        [VC presentViewController:self.containerViewController animated:YES completion:completion];
+    });
 }
 
 - (void)dismiss {
@@ -116,12 +109,14 @@ static NSMutableSet *_retainedPopControllers;
 - (void)dismissWithCompletion:(nullable void (^)(void))completion {
     if (!self.presented)
         return;
-
-    [self destroyObserver];
-    [self.containerViewController dismissViewControllerAnimated:YES completion:^{
-        [_retainedPopControllers removeObject:self];
-        completion ? completion() : nil;
-    }];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self destroyObserver];
+        [self.containerViewController dismissViewControllerAnimated:YES completion:^{
+            [_retainedPopControllers removeObject:self];
+            completion ? completion() : nil;
+        }];
+    });
 }
 
 #pragma mark - observe
@@ -398,6 +393,7 @@ static NSMutableSet *_retainedPopControllers;
 - (UIView *)containerView {
     if (!_containerView) {
         _containerView = [UIView new];
+        _containerView.backgroundColor = [UIColor whiteColor];
         _containerView.clipsToBounds = YES;
         _containerView.layer.cornerRadius = 8;
     }

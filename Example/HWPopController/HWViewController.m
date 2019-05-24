@@ -7,11 +7,17 @@
 //
 
 #import "HWViewController.h"
-#import <HWPopController/HWPopController.h>
+#import <Masonry/Masonry.h>
+#import "HWFullDialogViewController.h"
 #import <HWPopController/HWPop.h>
-#import "HWPop1ViewController.h"
+#import "HWTopBarViewController.h"
+#import "HWBottomAuthViewController.h"
+#import "HWCenterViewController.h"
 
-@interface HWViewController ()
+@interface HWViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, copy) NSArray *titles;
 
 @end
 
@@ -21,30 +27,92 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	UIButton *testButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	testButton.frame = CGRectMake(44, 84, 60, 40);
-    [testButton setTitle:@"TEST" forState:UIControlStateNormal];
-    [testButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [testButton addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:testButton];
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
 }
 
-- (void)test {
-    HWPop1ViewController *pop1ViewController = [HWPop1ViewController new];
-    [pop1ViewController popupWithPopType:HWPopTypeGrowIn dismissType:HWDismissTypeGrowOut dismissOnBackgroundTouch:YES];
-    HWPopController *popController = [[HWPopController alloc] initWithRootViewController:pop1ViewController];
-    popController.popPosition = HWPopPositionTop;
-    [popController presentInViewController:self];
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.titles.count;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
+    cell.textLabel.text = self.titles[indexPath.row];
+    return cell;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.textLabel.font = [UIFont systemFontOfSize:16];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:{
+
+        }
+            break;
+        case 1:{
+            HWBottomAuthViewController *bottomAuthVC = [HWBottomAuthViewController new];
+            HWPopController *popController = [[HWPopController alloc] initWithViewController:bottomAuthVC];
+            popController.popPosition = HWPopPositionBottom;
+            popController.popType = HWPopTypeBounceInFromBottom;
+            popController.dismissType = HWDismissTypeSlideOutFromBottom;
+            popController.shouldDismissOnBackgroundTouch = NO;
+            [popController presentInViewController:self];
+        }
+            break;
+        case 2:{
+            HWTopBarViewController *topBarVC = [HWTopBarViewController new];
+            HWPopController *popController = [[HWPopController alloc] initWithViewController:topBarVC];
+            popController.backgroundAlpha = 0;
+            popController.popPosition = HWPopPositionTop;
+            popController.popType = HWPopTypeBounceInFromTop;
+            popController.dismissType = HWDismissTypeSlideOutFromTop;
+            [popController presentInViewController:self];
+        }
+            break;
+        case 3:{
+            HWFullDialogViewController *fullDialogViewController = [HWFullDialogViewController new];
+            [fullDialogViewController popupWithPopType:HWPopTypeShrinkIn dismissType:HWDismissTypeSlideOutFromBottom];
+        }
+            break;
+        case 4:{
+            HWCenterViewController *centerViewController = [HWCenterViewController new];
+            [centerViewController popup];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - Getter
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.rowHeight = 55;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
+
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
+}
+
+- (NSArray *)titles {
+    if (!_titles) {
+        _titles = @[@"Pop Animation Style (todo)", @"Bottom Sheet", @"Top Bar", @"Full Dialog", @"Center"];
+    }
+    return _titles;
+}
+
 
 @end

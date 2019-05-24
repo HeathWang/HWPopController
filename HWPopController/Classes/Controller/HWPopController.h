@@ -62,6 +62,7 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
  Below props should be set when you pop the controller.
  //////////////////////////////////////////////////////
  */
+
 /**
  * pop animation style
  * default is HWPopTypeGrowIn
@@ -77,13 +78,11 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
  * default is 0.2 s
  */
 @property (nonatomic, assign) NSTimeInterval animationDuration;
-
 /**
  * The pop view final position.
  * Default is HWPopPositionCenter
  */
 @property (nonatomic, assign) HWPopPosition popPosition;
-
 /**
  * The offset of the pop view.
  */
@@ -101,6 +100,10 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
  Below props can be set when you need.
  //////////////////////////////////////////////////////
  */
+
+/**
+ * The background when popup. You can set it as `UIImageView`, `UIVisualEffectView` such as.
+ */
 @property (nullable, nonatomic, strong) UIView *backgroundView;
 /**
  * pop background alpha.
@@ -115,7 +118,15 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
 
 #pragma mark - readonly properties
 
+/**
+ * Hold the pop view container.
+ * Default the backgroundColor is White.
+ * Default the corner radius is 8.0f.
+ */
 @property (nonatomic, strong, readonly) UIView *containerView;
+/**
+ * Which view the popped ViewController view added.
+ */
 @property (nonatomic, strong, readonly) UIView *contentView;
 
 /**
@@ -124,7 +135,7 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
 @property (nonatomic, strong, readonly) UIViewController *topViewController;
 @property (nonatomic, assign, readonly) BOOL presented;
 
-- (instancetype)initWithRootViewController:(UIViewController *)rootViewController;
+- (instancetype)initWithViewController:(UIViewController *)rootViewController;
 
 - (void)presentInViewController:(UIViewController *)viewController;
 

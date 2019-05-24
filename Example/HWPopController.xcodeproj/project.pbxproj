@@ -21,7 +21,11 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		7E50BDB02294F46C007A81DF /* HWPop1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E50BDAF2294F46C007A81DF /* HWPop1ViewController.m */; };
+		7E73D1FE22969D2B00D02E82 /* HWAnimationConfigListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D1FD22969D2B00D02E82 /* HWAnimationConfigListViewController.m */; };
+		7E73D2012296A00C00D02E82 /* HWFullDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D2002296A00C00D02E82 /* HWFullDialogViewController.m */; };
+		7E73D2042296A4F500D02E82 /* HWTopBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D2032296A4F500D02E82 /* HWTopBarViewController.m */; };
+		7E73D2072296B38700D02E82 /* HWBottomAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D2062296B38700D02E82 /* HWBottomAuthViewController.m */; };
+		7E73D20A22978AA400D02E82 /* HWCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D20922978AA400D02E82 /* HWCenterViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C0DC889E32E893436B1186FD /* Pods_HWPopController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C1CC41B89B43EC4E8C8EC3 /* Pods_HWPopController_Example.framework */; };
 		FFA8C589062ED6989C232A91 /* Pods_HWPopController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3F556EFAFC49965CF9FA04 /* Pods_HWPopController_Tests.framework */; };
@@ -59,8 +63,16 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		61A188FE24FBE1C2266D4495 /* Pods-HWPopController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopController_Tests.release.xcconfig"; path = "Target Support Files/Pods-HWPopController_Tests/Pods-HWPopController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7E50BDAE2294F46C007A81DF /* HWPop1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWPop1ViewController.h; sourceTree = "<group>"; };
-		7E50BDAF2294F46C007A81DF /* HWPop1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWPop1ViewController.m; sourceTree = "<group>"; };
+		7E73D1FC22969D2B00D02E82 /* HWAnimationConfigListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWAnimationConfigListViewController.h; sourceTree = "<group>"; };
+		7E73D1FD22969D2B00D02E82 /* HWAnimationConfigListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWAnimationConfigListViewController.m; sourceTree = "<group>"; };
+		7E73D1FF2296A00C00D02E82 /* HWFullDialogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWFullDialogViewController.h; sourceTree = "<group>"; };
+		7E73D2002296A00C00D02E82 /* HWFullDialogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWFullDialogViewController.m; sourceTree = "<group>"; };
+		7E73D2022296A4F500D02E82 /* HWTopBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWTopBarViewController.h; sourceTree = "<group>"; };
+		7E73D2032296A4F500D02E82 /* HWTopBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTopBarViewController.m; sourceTree = "<group>"; };
+		7E73D2052296B38700D02E82 /* HWBottomAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWBottomAuthViewController.h; sourceTree = "<group>"; };
+		7E73D2062296B38700D02E82 /* HWBottomAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWBottomAuthViewController.m; sourceTree = "<group>"; };
+		7E73D20822978AA400D02E82 /* HWCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWCenterViewController.h; sourceTree = "<group>"; };
+		7E73D20922978AA400D02E82 /* HWCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWCenterViewController.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8761CA90FC335ACDECEAFE2D /* Pods-HWPopController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopController_Example.release.xcconfig"; path = "Target Support Files/Pods-HWPopController_Example/Pods-HWPopController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		908B4B1C682A978A1DD5EED8 /* HWPopController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HWPopController.podspec; path = ../HWPopController.podspec; sourceTree = "<group>"; };
@@ -146,6 +158,8 @@
 		6003F593195388D20070C39A /* Example for HWPopController */ = {
 			isa = PBXGroup;
 			children = (
+				7E73D1F722969B8800D02E82 /* PopViewController */,
+				7E73D1F622969ADB00D02E82 /* AnimationStyle */,
 				6003F59C195388D20070C39A /* HWAppDelegate.h */,
 				6003F59D195388D20070C39A /* HWAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -154,8 +168,6 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				7E50BDAE2294F46C007A81DF /* HWPop1ViewController.h */,
-				7E50BDAF2294F46C007A81DF /* HWPop1ViewController.m */,
 			);
 			name = "Example for HWPopController";
 			path = HWPopController;
@@ -199,6 +211,30 @@
 				DBF52927D2EA3B48F0589341 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7E73D1F622969ADB00D02E82 /* AnimationStyle */ = {
+			isa = PBXGroup;
+			children = (
+				7E73D1FC22969D2B00D02E82 /* HWAnimationConfigListViewController.h */,
+				7E73D1FD22969D2B00D02E82 /* HWAnimationConfigListViewController.m */,
+			);
+			path = AnimationStyle;
+			sourceTree = "<group>";
+		};
+		7E73D1F722969B8800D02E82 /* PopViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E73D1FF2296A00C00D02E82 /* HWFullDialogViewController.h */,
+				7E73D2002296A00C00D02E82 /* HWFullDialogViewController.m */,
+				7E73D2022296A4F500D02E82 /* HWTopBarViewController.h */,
+				7E73D2032296A4F500D02E82 /* HWTopBarViewController.m */,
+				7E73D2052296B38700D02E82 /* HWBottomAuthViewController.h */,
+				7E73D2062296B38700D02E82 /* HWBottomAuthViewController.m */,
+				7E73D20822978AA400D02E82 /* HWCenterViewController.h */,
+				7E73D20922978AA400D02E82 /* HWCenterViewController.m */,
+			);
+			path = PopViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,12 +368,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HWPopController_Example/Pods-HWPopController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HWPopController/HWPopController.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HWPopController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,8 +413,12 @@
 			files = (
 				6003F59E195388D20070C39A /* HWAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* HWViewController.m in Sources */,
+				7E73D20A22978AA400D02E82 /* HWCenterViewController.m in Sources */,
+				7E73D2012296A00C00D02E82 /* HWFullDialogViewController.m in Sources */,
+				7E73D1FE22969D2B00D02E82 /* HWAnimationConfigListViewController.m in Sources */,
+				7E73D2072296B38700D02E82 /* HWBottomAuthViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				7E50BDB02294F46C007A81DF /* HWPop1ViewController.m in Sources */,
+				7E73D2042296A4F500D02E82 /* HWTopBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

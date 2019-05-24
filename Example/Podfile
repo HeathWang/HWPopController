@@ -4,6 +4,7 @@ platform :ios, '8.0'
 
 target 'HWPopController_Example' do
   pod 'HWPopController', :path => '../'
+  pod 'Masonry'
 
 target 'HWPopController_Tests' do
     inherit! :search_paths

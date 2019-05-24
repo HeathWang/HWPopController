@@ -151,27 +151,35 @@ UIViewController *HWGetTopMostViewController() {
 @implementation UIViewController (HWPop)
 
 - (HWPopController *)popup {
-	 return [self popupWithPopType:HWPopTypeGrowIn dismissType:HWDismissTypeFadeOut inViewController:HWGetTopMostViewController() dismissOnBackgroundTouch:YES];
+	 return [self popupWithPopType:HWPopTypeGrowIn dismissType:HWDismissTypeFadeOut position:HWPopPositionCenter inViewController:HWGetTopMostViewController() dismissOnBackgroundTouch:YES];
+}
+
+- (HWPopController *)popupWithPopType:(HWPopType)popType dismissType:(HWDismissType)dismissType{
+	return [self popupWithPopType:popType dismissType:dismissType position:HWPopPositionCenter];
 }
 
 - (HWPopController *)popupWithPopType:(HWPopType)popType
-                          dismissType:(HWDismissType)dismissType {
-    return [self popupWithPopType:popType dismissType:dismissType inViewController:HWGetTopMostViewController() dismissOnBackgroundTouch:YES];
+                          dismissType:(HWDismissType)dismissType
+							 position:(HWPopPosition)popPosition {
+    return [self popupWithPopType:popType dismissType:dismissType position:popPosition inViewController:HWGetTopMostViewController() dismissOnBackgroundTouch:YES];
 }
 
 - (HWPopController *)popupWithPopType:(HWPopType)popType
 						  dismissType:(HWDismissType)dismissType
+							 position:(HWPopPosition)popPosition
 			 dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch {
-	return [self popupWithPopType:popType dismissType:dismissType inViewController:HWGetTopMostViewController() dismissOnBackgroundTouch:shouldDismissOnBackgroundTouch];
+	return [self popupWithPopType:popType dismissType:dismissType position:popPosition inViewController:HWGetTopMostViewController() dismissOnBackgroundTouch:shouldDismissOnBackgroundTouch];
 }
 
 - (HWPopController *)popupWithPopType:(HWPopType)popType
 						  dismissType:(HWDismissType)dismissType
+                             position:(HWPopPosition)popPosition
 					 inViewController:(UIViewController *)inViewController
 			 dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch {
-	HWPopController *popController = [[HWPopController alloc] initWithRootViewController:self];
+	HWPopController *popController = [[HWPopController alloc] initWithViewController:self];
 	popController.popType = popType;
 	popController.dismissType = dismissType;
+	popController.popPosition = popPosition;
 	popController.shouldDismissOnBackgroundTouch = shouldDismissOnBackgroundTouch;
 	[popController presentInViewController:inViewController];
     return popController;
