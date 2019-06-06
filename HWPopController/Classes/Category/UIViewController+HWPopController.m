@@ -15,6 +15,10 @@
 @dynamic contentSizeInPopWhenLandscape;
 @dynamic popController;
 
+static inline BOOL HW_FLOAT_VALUE_IS_ZERO(CGFloat value) {
+    return (value > -FLT_EPSILON) && (value < FLT_EPSILON);
+}
+
 + (void)load {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
@@ -76,7 +80,7 @@
 }
 
 - (void)setContentSizeInPop:(CGSize)contentSizeInPop {
-	if (!CGSizeEqualToSize(contentSizeInPop, CGSizeZero) && contentSizeInPop.width == 0) {
+	if (!CGSizeEqualToSize(contentSizeInPop, CGSizeZero) && HW_FLOAT_VALUE_IS_ZERO(contentSizeInPop.width)) {
 		switch ([UIApplication sharedApplication].statusBarOrientation) {
 			case UIInterfaceOrientationLandscapeLeft:
 			case UIInterfaceOrientationLandscapeRight:{
@@ -100,7 +104,7 @@
 }
 
 - (void)setContentSizeInPopWhenLandscape:(CGSize)contentSizeInPopWhenLandscape {
-	if (!CGSizeEqualToSize(contentSizeInPopWhenLandscape, CGSizeZero) && contentSizeInPopWhenLandscape.width == 0) {
+	if (!CGSizeEqualToSize(contentSizeInPopWhenLandscape, CGSizeZero) && HW_FLOAT_VALUE_IS_ZERO(contentSizeInPopWhenLandscape.width)) {
 		switch ([UIApplication sharedApplication].statusBarOrientation) {
 			case UIInterfaceOrientationLandscapeLeft:
 			case UIInterfaceOrientationLandscapeRight:{

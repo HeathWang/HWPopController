@@ -16,9 +16,9 @@ typedef NS_ENUM(NSInteger, HWPopPosition) {
 	HWPopPositionBottom,
 };
 
-typedef NS_ENUM(NSInteger, HWPopControllerState) {
-    HWPopControllerStatePop,
-    HWPopControllerStateDismiss,
+typedef NS_ENUM(NSInteger, HWPopState) {
+    HWPopStatePop,
+    HWPopStateDismiss,
 };
 
 typedef NS_ENUM(NSInteger, HWPopType) {
@@ -135,11 +135,19 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
 @property (nonatomic, strong, readonly) UIViewController *topViewController;
 @property (nonatomic, assign, readonly) BOOL presented;
 
-- (instancetype)initWithViewController:(UIViewController *)rootViewController;
+/**
+ * init PopController
+ * @param presentedViewController the controller which will be presented
+ */
+- (instancetype)initWithViewController:(UIViewController *)presentedViewController;
 
-- (void)presentInViewController:(UIViewController *)viewController;
+/**
+ * pop controller
+ * @param presentingViewController which controller to present.
+ */
+- (void)presentInViewController:(UIViewController *)presentingViewController;
 
-- (void)presentInViewController:(UIViewController *)viewController completion:(nullable void (^)(void))completion;
+- (void)presentInViewController:(UIViewController *)presentingViewController completion:(nullable void (^)(void))completion;
 
 - (void)dismiss;
 

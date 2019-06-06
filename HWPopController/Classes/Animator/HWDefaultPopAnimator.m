@@ -17,7 +17,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
     return context.duration ?: 0.2;
 }
 
-- (void)popAnimate:(HWPopAnimationContext *)context completion:(void (^ __nullable)(BOOL finished))completion {
+- (void)popAnimate:(HWPopAnimationContext *)context completion:(void (^)(BOOL finished))completion {
     NSTimeInterval duration = [self popControllerAnimationDuration:context];
     UIView *containerView = context.containerView;
     switch (self.popType) {
@@ -162,7 +162,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
     }
 }
 
-- (void)dismissAnimate:(HWPopAnimationContext *)context completion:(void (^ __nullable)(BOOL finished))completion {
+- (void)dismissAnimate:(HWPopAnimationContext *)context completion:(void (^)(BOOL finished))completion {
     NSTimeInterval duration = [self popControllerAnimationDuration:context];
     NSTimeInterval bounceDuration1 = duration * 1.f / 3.f;
     NSTimeInterval bounceDuration2 = duration * 2.f / 3.f;

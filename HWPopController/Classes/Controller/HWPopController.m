@@ -61,40 +61,37 @@ static NSMutableSet *_retainedPopControllers;
     return self;
 }
 
-
 #pragma mark - public method
 
-- (instancetype)initWithViewController:(UIViewController *)rootViewController {
+- (instancetype)initWithViewController:(UIViewController *)viewController {
     self = [self init];
     if (self) {
-        self.topViewController = rootViewController;
+        self.topViewController = viewController;
         // set popController to the popped viewController
-        rootViewController.popController = self;
-        [self setupObserverForViewController:rootViewController];
+        viewController.popController = self;
+        [self setupObserverForViewController:viewController];
     }
     return self;
 }
 
-- (void)presentInViewController:(UIViewController *)viewController {
-    [self presentInViewController:viewController completion:nil];
+- (void)presentInViewController:(UIViewController *)presentingViewController {
+    [self presentInViewController:presentingViewController completion:nil];
 }
 
-- (void)presentInViewController:(UIViewController *)viewController completion:(nullable void (^)(void))completion {
+- (void)presentInViewController:(UIViewController *)presentingViewController completion:(nullable void (^)(void))completion {
     if (self.presented)
         return;
     
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        
         [self setupObserver];
-        
         [_retainedPopControllers addObject:self];
         
-        UIViewController *VC = viewController.tabBarController ?: viewController;
+        UIViewController *VC = presentingViewController.tabBarController ?: presentingViewController;
         
         if (@available(iOS 11.0, *)) {
             if (!self.didOverrideSafeAreaInsets) {
-                self.safeAreaInsets = viewController.view.safeAreaInsets;
+                self.safeAreaInsets = presentingViewController.view.safeAreaInsets;
             }
         }
         
@@ -157,7 +154,7 @@ static NSMutableSet *_retainedPopControllers;
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context {
     if (object == self.topViewController) {
         if (self.topViewController.isViewLoaded && self.topViewController.view.superview) {
-            [UIView animateWithDuration:0.25 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [UIView animateWithDuration:0.20 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 [self layoutContainerView];
             } completion:^(BOOL finished) {
                 [self adjustContainerViewOrigin];
@@ -319,10 +316,10 @@ static NSMutableSet *_retainedPopControllers;
         }
             break;
     }
-    containerViewY += self.positionOffset.y;
 
-    self.containerView.frame = CGRectMake((self.containerViewController.view.bounds.size.width - containerViewWidth) / 2 + self.positionOffset.x,
-            containerViewY, containerViewWidth, containerViewHeight);
+    containerViewY += self.positionOffset.y;
+    CGFloat containerViewX = (self.containerViewController.view.bounds.size.width - containerViewWidth) / 2 + self.positionOffset.x;
+    self.containerView.frame = CGRectMake(containerViewX, containerViewY, containerViewWidth, containerViewHeight);
     self.contentView.frame = CGRectMake(0, 0, contentSizeOfTopView.width, contentSizeOfTopView.height);
 
     UIViewController *topViewController = self.topViewController;

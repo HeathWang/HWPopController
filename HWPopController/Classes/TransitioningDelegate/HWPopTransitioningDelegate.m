@@ -22,11 +22,11 @@
 #pragma mark - UIViewControllerTransitioningDelegate
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-	return [[HWPopControllerAnimatedTransitioning alloc] initWithState:HWPopControllerStatePop popController:self.popController];
+	return [[HWPopControllerAnimatedTransitioning alloc] initWithState:HWPopStatePop popController:self.popController];
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-	return [[HWPopControllerAnimatedTransitioning alloc] initWithState:HWPopControllerStateDismiss popController:self.popController];
+	return [[HWPopControllerAnimatedTransitioning alloc] initWithState:HWPopStateDismiss popController:self.popController];
 }
 
 @end

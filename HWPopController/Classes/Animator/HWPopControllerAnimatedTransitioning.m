@@ -10,7 +10,7 @@
 
 @implementation HWPopAnimationContext
 
-- (instancetype)initWithState:(HWPopControllerState)state containerView:(UIView *)containerView {
+- (instancetype)initWithState:(HWPopState)state containerView:(UIView *)containerView {
 	self = [super init];
 	if (self) {
 		_state = state;
@@ -39,7 +39,7 @@
 
 @implementation HWPopControllerAnimatedTransitioning
 
-- (instancetype)initWithState:(HWPopControllerState)state popController:(HWPopController *)popController {
+- (instancetype)initWithState:(HWPopState)state popController:(HWPopController *)popController {
 	self = [super init];
 	if (self) {
 		_state = state;
@@ -152,11 +152,11 @@
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
 	switch (self.state) {
-		case HWPopControllerStatePop: {
+		case HWPopStatePop: {
 			[self popAnimateTransition:transitionContext];
 		}
 			break;
-		case HWPopControllerStateDismiss:{
+		case HWPopStateDismiss:{
 			[self dismissTransition:transitionContext];
 		}
 			break;
