@@ -14,6 +14,7 @@
 #import "HWBottomAuthViewController.h"
 #import "HWCenterViewController.h"
 #import "HWAnimationConfigListViewController.h"
+#import "HWAutoSizeViewController.h"
 
 @interface HWViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -90,6 +91,11 @@
             [centerViewController popup];
         }
             break;
+        case 5:{
+            HWAutoSizeViewController *autoSizeVC = [HWAutoSizeViewController new];
+            [autoSizeVC popup];
+        }
+            break;
         default:
             break;
     }
@@ -111,7 +117,7 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@"Pop Animation Style", @"Bottom Sheet", @"Top Bar", @"Full Dialog", @"Center"];
+        _titles = @[@"Pop Animation Style", @"Bottom Sheet", @"Top Bar", @"Full Dialog", @"Center", @"AutoSize"];
     }
     return _titles;
 }
