@@ -53,7 +53,7 @@ HWPopController is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'HWPopController', '~> 1.0.3'
+pod 'HWPopController', '~> 1.0.5'
 ```
 
 ## How to use
