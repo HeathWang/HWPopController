@@ -9,6 +9,7 @@
 #define HWPop_h
 
 #import <HWPopController/HWPopController.h>
+#import <HWPopController/HWPopNavigationController.h>
 #import <HWPopController/UIViewController+HWPopController.h>
 #import <HWPopController/HWPopControllerAnimationProtocol.h>
 #import <HWPopController/HWPopControllerAnimatedTransitioning.h>

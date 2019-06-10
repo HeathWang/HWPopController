@@ -39,6 +39,7 @@
 
 ## Features
 * Support popup UIViewController.
+* Support popup UINavigationController, dynamic change pop size when you push/pop.
 * Support 12 kinds of pop & dismiss animations.
 * Support define your own custom animation for pop & dismiss.
 * Support popup at top/center/bottom, and use `positionOffset` to adjust x,y coordinates.
@@ -81,6 +82,7 @@ pod 'HWPopController', '~> 1.0.3'
 1. Popup your viewController
 
     If you want high custom your popup, init HWPopController. Then config the properties what you want.
+    Please see `HWPopController.h`
     
     ```Objective-C
     {
@@ -90,33 +92,6 @@ pod 'HWPopController', '~> 1.0.3'
         popController.popPosition = HWPopPositionTop;
         [popController presentInViewController:self];
     }
-        
-     /**
-     * pop animation style
-     * default is HWPopTypeGrowIn
-     */
-    @property (nonatomic, assign) HWPopType popType;
-    /**
-     * dismiss animation style
-     * default is HWDismissTypeFadeOut
-     */
-    @property (nonatomic, assign) HWDismissType dismissType;
-    /**
-     * animation duration
-     * default is 0.2 s
-     */
-    @property (nonatomic, assign) NSTimeInterval animationDuration;
-    
-    /**
-     * The pop view final position.
-     * Default is HWPopPositionCenter
-     */
-    @property (nonatomic, assign) HWPopPosition popPosition;
-    
-    /**
-     * The offset of the pop view.
-     */
-    @property (nonatomic, assign) CGPoint positionOffset;
     ```
     
     Quick popup, use the UIViewController category.
@@ -125,6 +100,34 @@ pod 'HWPopController', '~> 1.0.3'
     HWPop1ViewController *pop1ViewController = [HWPop1ViewController new];
     [pop1ViewController popupWithPopType:HWPopTypeGrowIn dismissType:HWDismissTypeGrowOut dismissOnBackgroundTouch:YES];
     ```
+    
+1. Dismiss pop 
+     Use native api.
+     
+    ```Objective-C
+    [self dismissViewControllerAnimated:YES completion:^{
+            
+    }];
+    ```
+    
+    Get popController, then call popController dismiss api.
+    
+    ```Objective-C
+     [self.popController dismiss];
+    ```
+
+### Pop UINavigationController
+
+If you want pop UINavigationController, and every stacked UIViewController contentSize is not same. You can use `HWPopNavigationController`.
+
+`HWPopNavigationController` subclass `UINavigationController`, you can inherit from `HWPopNavigationController`, config contentSizeInPop as default contentSize.
+
+When you push A Controller, then Push B Controller. A, B Controller should config contentSizeInPop if you need. If you have not config it, we will use NavigationController contentSizeInPop.
+
+Relationship：
+* UINavigationController
+    * HWPopNavigationController 
+        * Your custom UINavigationController inherit from HWPopNavigationController
 
 **More details, pls see the Example.**
 

@@ -11,11 +11,13 @@
 #endif
 
 #import "HWDefaultPopAnimator.h"
+#import "HWNavAnimatedTransitioning.h"
 #import "HWPopControllerAnimatedTransitioning.h"
 #import "HWPopControllerAnimationProtocol.h"
 #import "NSObject+HWAdd.h"
 #import "UIViewController+HWPopController.h"
 #import "HWPopController.h"
+#import "HWPopNavigationController.h"
 #import "HWPop.h"
 #import "HWPopTransitioningDelegate.h"
 

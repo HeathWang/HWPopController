@@ -19,7 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    self.navigationItem.title = @"Cat";
+    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(didTapToDismiss)];
+    self.navigationItem.rightBarButtonItem = doneItem;
+
     self.contentSizeInPop = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) - 60, 330);
+    self.contentSizeInPopWhenLandscape = CGSizeMake(315, 300);
 
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_cat"]];
 
@@ -49,7 +56,8 @@
 }
 
 - (void)didTapToDismiss {
-    [self.popController dismiss];
+//    [self.popController dismiss];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 

@@ -56,7 +56,7 @@
 }
 
 - (void)growAction {
-    self.label.text = [NSString stringWithFormat:@"%@%@", self.label.text, @"\nADD SOMETHING TO TAIL."];
+    self.label.text = [NSString stringWithFormat:@"%@%@", self.label.text, @"\nShow Me the Code."];
 
     [self.view layoutIfNeeded];
     CGFloat height = CGRectGetMaxY(self.growButton.frame) + 10;
@@ -78,7 +78,7 @@
         _label = [UILabel new];
         _label.textAlignment = NSTextAlignmentCenter;
         _label.numberOfLines = 0;
-        _label.text = @"据普华永道的最新预测显示，2020年中国或将成为全球最大电影市场，中国将成为全球最爱看电影的国家。但内地电影市场在2019年上半年的票房并不太理想，前五个月和去年同期相差足有14.68亿。";
+        _label.text = @"The UIViewController class defines the shared behavior that is common to all view controllers. You rarely create instances of the UIViewController class directly. Instead, you subclass UIViewController and add the methods and properties needed to manage the view controller's view hierarchy.";
     }
     return _label;
 }

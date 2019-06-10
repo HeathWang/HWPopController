@@ -154,7 +154,7 @@ static NSMutableSet *_retainedPopControllers;
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context {
     if (object == self.topViewController) {
         if (self.topViewController.isViewLoaded && self.topViewController.view.superview) {
-            [UIView animateWithDuration:0.20 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [UIView animateWithDuration:0.35 delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
                 [self layoutContainerView];
             } completion:^(BOOL finished) {
                 [self adjustContainerViewOrigin];

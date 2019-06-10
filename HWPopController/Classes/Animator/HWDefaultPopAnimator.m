@@ -190,7 +190,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             } completion:completion];
         }
             break;
-        case HWDismissTypeSlideOutFromTop:{
+        case HWDismissTypeSlideOutToTop:{
             CGRect rect = containerView.frame;
             rect.origin.y = -CGRectGetHeight(rect);
             [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -198,7 +198,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             } completion:completion];
         }
             break;
-        case HWDismissTypeSlideOutFromBottom:{
+        case HWDismissTypeSlideOutToBottom:{
             CGRect rect = containerView.frame;
             rect.origin.y = containerView.superview.frame.size.height;
             [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -206,7 +206,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             } completion:completion];
         }
             break;
-        case HWDismissTypeSlideOutFromLeft:{
+        case HWDismissTypeSlideOutToLeft:{
             CGRect rect = containerView.frame;
             rect.origin.x = -CGRectGetWidth(rect);
             [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -214,7 +214,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             } completion:completion];
         }
             break;
-        case HWDismissTypeSlideOutFromRight:{
+        case HWDismissTypeSlideOutToRight:{
             CGRect rect = containerView.frame;
             rect.origin.x = CGRectGetWidth(containerView.superview.frame);
             [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -233,7 +233,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             }];
         }
             break;
-        case HWDismissTypeBounceOutFromTop:{
+        case HWDismissTypeBounceOutToTop:{
             CGRect rect1 = containerView.frame;
             rect1.origin.y += 20;
             CGRect rect2 = containerView.frame;
@@ -247,7 +247,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             }];
         }
             break;
-        case HWDismissTypeBounceOutFromBottom:{
+        case HWDismissTypeBounceOutToBottom:{
             CGRect rect1 = containerView.frame;
             rect1.origin.y -= 20;
             CGRect rect2 = containerView.frame;
@@ -261,7 +261,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             }];
         }
             break;
-        case HWDismissTypeBounceOutFromLeft:{
+        case HWDismissTypeBounceOutToLeft:{
             CGRect rect1 = containerView.frame;
             rect1.origin.x += 20;
             CGRect rect2 = containerView.frame;
@@ -275,7 +275,7 @@ static const CGFloat kDefaultSpringVelocity = 10.0;
             }];
         }
             break;
-        case HWDismissTypeBounceOutFromRight:{
+        case HWDismissTypeBounceOutToRight:{
             CGRect rect1 = containerView.frame;
             rect1.origin.x -= 20;
             CGRect rect2 = containerView.frame;

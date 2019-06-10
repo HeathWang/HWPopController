@@ -17,8 +17,8 @@ typedef NS_ENUM(NSInteger, HWPopPosition) {
 };
 
 typedef NS_ENUM(NSInteger, HWPopState) {
-    HWPopStatePop,
-    HWPopStateDismiss,
+    HWPopStatePop,      // present
+    HWPopStateDismiss,  // dismiss
 };
 
 typedef NS_ENUM(NSInteger, HWPopType) {
@@ -42,15 +42,15 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
     HWDismissTypeFadeOut,
     HWDismissTypeGrowOut,
     HWDismissTypeShrinkOut,
-    HWDismissTypeSlideOutFromTop,
-    HWDismissTypeSlideOutFromBottom,
-    HWDismissTypeSlideOutFromLeft,
-    HWDismissTypeSlideOutFromRight,
+    HWDismissTypeSlideOutToTop,
+    HWDismissTypeSlideOutToBottom,
+    HWDismissTypeSlideOutToLeft,
+    HWDismissTypeSlideOutToRight,
     HWDismissTypeBounceOut,
-    HWDismissTypeBounceOutFromTop,
-    HWDismissTypeBounceOutFromBottom,
-    HWDismissTypeBounceOutFromLeft,
-    HWDismissTypeBounceOutFromRight,
+    HWDismissTypeBounceOutToTop,
+    HWDismissTypeBounceOutToBottom,
+    HWDismissTypeBounceOutToLeft,
+    HWDismissTypeBounceOutToRight,
 };
 
 @interface HWPopController : NSObject
@@ -122,6 +122,7 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
  * Hold the pop view container.
  * Default the backgroundColor is White.
  * Default the corner radius is 8.0f.
+ * If you want to custom corner, change containerView layer.
  */
 @property (nonatomic, strong, readonly) UIView *containerView;
 /**

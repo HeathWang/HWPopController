@@ -15,6 +15,8 @@
 #import "HWCenterViewController.h"
 #import "HWAnimationConfigListViewController.h"
 #import "HWAutoSizeViewController.h"
+#import "HWNavViewController.h"
+#import "HWNavStackViewController.h"
 
 @interface HWViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -66,7 +68,7 @@
             HWPopController *popController = [[HWPopController alloc] initWithViewController:bottomAuthVC];
             popController.popPosition = HWPopPositionBottom;
             popController.popType = HWPopTypeBounceInFromBottom;
-            popController.dismissType = HWDismissTypeSlideOutFromBottom;
+            popController.dismissType = HWDismissTypeSlideOutToBottom;
             popController.shouldDismissOnBackgroundTouch = NO;
             [popController presentInViewController:self];
         }
@@ -77,13 +79,13 @@
             popController.backgroundAlpha = 0;
             popController.popPosition = HWPopPositionTop;
             popController.popType = HWPopTypeBounceInFromTop;
-            popController.dismissType = HWDismissTypeSlideOutFromTop;
+            popController.dismissType = HWDismissTypeSlideOutToTop;
             [popController presentInViewController:self];
         }
             break;
         case 3:{
             HWFullDialogViewController *fullDialogViewController = [HWFullDialogViewController new];
-            [fullDialogViewController popupWithPopType:HWPopTypeShrinkIn dismissType:HWDismissTypeSlideOutFromBottom];
+            [fullDialogViewController popupWithPopType:HWPopTypeShrinkIn dismissType:HWDismissTypeSlideOutToBottom];
         }
             break;
         case 4:{
@@ -94,6 +96,11 @@
         case 5:{
             HWAutoSizeViewController *autoSizeVC = [HWAutoSizeViewController new];
             [autoSizeVC popup];
+        }
+            break;
+        case 6:{
+            HWNavViewController *navVC = [[HWNavViewController alloc] initWithRootViewController:[HWNavStackViewController new]];
+            [navVC popupWithPopType:HWPopTypeSlideInFromTop dismissType:HWDismissTypeSlideOutToBottom];
         }
             break;
         default:
@@ -117,7 +124,7 @@
 
 - (NSArray *)titles {
     if (!_titles) {
-        _titles = @[@"Pop Animation Style", @"Bottom Sheet", @"Top Bar", @"Full Dialog", @"Center", @"AutoSize"];
+        _titles = @[@"Pop Animation Style", @"Bottom Sheet", @"Top Bar", @"Full Dialog", @"Center", @"AutoSize", @"Navigation"];
     }
     return _titles;
 }

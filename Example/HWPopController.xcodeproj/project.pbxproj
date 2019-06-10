@@ -29,6 +29,8 @@
 		7E73D20D2297C38100D02E82 /* HWCatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D20C2297C38100D02E82 /* HWCatViewController.m */; };
 		7E73D2102297C61000D02E82 /* HWPickTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E73D20F2297C61000D02E82 /* HWPickTypeViewController.m */; };
 		7E93125F22A8F06000D97313 /* HWAutoSizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E93125E22A8F06000D97313 /* HWAutoSizeViewController.m */; };
+		7E93126222ADF68900D97313 /* HWNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E93126122ADF68900D97313 /* HWNavViewController.m */; };
+		7E93126522ADF74200D97313 /* HWNavStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E93126422ADF74200D97313 /* HWNavStackViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C0DC889E32E893436B1186FD /* Pods_HWPopController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C1CC41B89B43EC4E8C8EC3 /* Pods_HWPopController_Example.framework */; };
 		FFA8C589062ED6989C232A91 /* Pods_HWPopController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3F556EFAFC49965CF9FA04 /* Pods_HWPopController_Tests.framework */; };
@@ -82,6 +84,10 @@
 		7E73D20F2297C61000D02E82 /* HWPickTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWPickTypeViewController.m; sourceTree = "<group>"; };
 		7E93125D22A8F06000D97313 /* HWAutoSizeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWAutoSizeViewController.h; sourceTree = "<group>"; };
 		7E93125E22A8F06000D97313 /* HWAutoSizeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWAutoSizeViewController.m; sourceTree = "<group>"; };
+		7E93126022ADF68900D97313 /* HWNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWNavViewController.h; sourceTree = "<group>"; };
+		7E93126122ADF68900D97313 /* HWNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWNavViewController.m; sourceTree = "<group>"; };
+		7E93126322ADF74200D97313 /* HWNavStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWNavStackViewController.h; sourceTree = "<group>"; };
+		7E93126422ADF74200D97313 /* HWNavStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWNavStackViewController.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8761CA90FC335ACDECEAFE2D /* Pods-HWPopController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopController_Example.release.xcconfig"; path = "Target Support Files/Pods-HWPopController_Example/Pods-HWPopController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		908B4B1C682A978A1DD5EED8 /* HWPopController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HWPopController.podspec; path = ../HWPopController.podspec; sourceTree = "<group>"; };
@@ -248,6 +254,10 @@
 				7E73D20922978AA400D02E82 /* HWCenterViewController.m */,
 				7E93125D22A8F06000D97313 /* HWAutoSizeViewController.h */,
 				7E93125E22A8F06000D97313 /* HWAutoSizeViewController.m */,
+				7E93126022ADF68900D97313 /* HWNavViewController.h */,
+				7E93126122ADF68900D97313 /* HWNavViewController.m */,
+				7E93126322ADF74200D97313 /* HWNavStackViewController.h */,
+				7E93126422ADF74200D97313 /* HWNavStackViewController.m */,
 			);
 			path = PopViewController;
 			sourceTree = "<group>";
@@ -300,7 +310,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HW;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = wangcongling;
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -427,8 +437,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* HWAppDelegate.m in Sources */,
+				7E93126522ADF74200D97313 /* HWNavStackViewController.m in Sources */,
 				7E73D20D2297C38100D02E82 /* HWCatViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* HWViewController.m in Sources */,
+				7E93126222ADF68900D97313 /* HWNavViewController.m in Sources */,
 				7E73D20A22978AA400D02E82 /* HWCenterViewController.m in Sources */,
 				7E73D2102297C61000D02E82 /* HWPickTypeViewController.m in Sources */,
 				7E73D2012296A00C00D02E82 /* HWFullDialogViewController.m in Sources */,
@@ -490,23 +502,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -530,22 +556,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
