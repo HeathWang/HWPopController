@@ -1,0 +1,7 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <Objective-C>
+      <option name="USE_SETTERS_IN_CONSTRUCTOR" value="false" />
+    </Objective-C>
+  </code_scheme>
+</component>

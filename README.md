@@ -23,6 +23,8 @@
 
 `HWPopController` can popup `UIViewController` with `multiple animations`, custom pop size in portrait / landscape screen. Popup position can be `top/center/bottom`. And you can define your own popup animations.
 
+**My another project for pop view from bottom:**[**HWPanModal**](https://github.com/HeathWang/HWPanModal)
+
 ## Screen Shot
 
 <div style="text-align: center"><table><tr>
