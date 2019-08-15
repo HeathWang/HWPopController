@@ -90,7 +90,7 @@
 		7E93126422ADF74200D97313 /* HWNavStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWNavStackViewController.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8761CA90FC335ACDECEAFE2D /* Pods-HWPopController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopController_Example.release.xcconfig"; path = "Target Support Files/Pods-HWPopController_Example/Pods-HWPopController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		908B4B1C682A978A1DD5EED8 /* HWPopController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HWPopController.podspec; path = ../HWPopController.podspec; sourceTree = "<group>"; };
+		908B4B1C682A978A1DD5EED8 /* HWPopController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HWPopController.podspec; path = ../HWPopController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		90DBC7D7B3DBF27664DA39C0 /* Pods-HWPopController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopController_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HWPopController_Tests/Pods-HWPopController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C438F51C454284CC083A871D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D64B1DCD0A2EC34204D85456 /* Pods-HWPopController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HWPopController_Example.debug.xcconfig"; path = "Target Support Files/Pods-HWPopController_Example/Pods-HWPopController_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -388,16 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HWPopController_Example/Pods-HWPopController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HWPopController/HWPopController.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HWPopController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",

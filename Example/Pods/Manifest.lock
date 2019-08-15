@@ -1,5 +1,5 @@
 PODS:
-  - HWPopController (1.0.4)
+  - HWPopController (1.0.6)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HWPopController: ea130e0c4835c52b1c5fb26517dd246f9e2e1c7b
+  HWPopController: 7a079918fe8ca5bf7de3d971faf1cab7fc905529
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 179b81bd45021112cd2e885cd6ee23d79b4fb578
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.5
