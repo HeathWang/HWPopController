@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 platform :ios, '8.0'
@@ -11,4 +12,11 @@ target 'HWPopController_Tests' do
 
     
   end
+end
+
+target 'swiftExample' do
+  platform :ios, '13.0'
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'HWPopController', :path => '../'
+
 end
