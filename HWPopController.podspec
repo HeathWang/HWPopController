@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HWPopController'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = 'HWPopController pop up in ViewController with some animations.'
 
 # This description is used to generate tags and improve search results.
