@@ -130,11 +130,13 @@ static NSMutableSet *_retainedPopControllers;
     // Observe orientation change
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChange) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
 
-    // Observe keyboard
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-
+    if (self.shouldAutoHandleKeyboardEvent) {
+        // Observe keyboard
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    }
+    
     self.isObserving = YES;
 }
 
@@ -237,6 +239,8 @@ static NSMutableSet *_retainedPopControllers;
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
+    if (!self.shouldAutoHandleKeyboardEvent) return;
+    
     UIView <UIKeyInput> *currentTextInput = [self getCurrentTextInputInView:self.containerView];
     if (!currentTextInput) {
         return;
@@ -247,6 +251,7 @@ static NSMutableSet *_retainedPopControllers;
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
+    if (!self.shouldAutoHandleKeyboardEvent) return;
     self.keyboardInfo = nil;
 
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -354,6 +359,7 @@ static NSMutableSet *_retainedPopControllers;
 
 - (void)setup {
     self.shouldDismissOnBackgroundTouch = YES;
+    self.shouldAutoHandleKeyboardEvent = YES;
     self.animationDuration = 0.2;
     self.popType = HWPopTypeGrowIn;
     self.dismissType = HWDismissTypeFadeOut;

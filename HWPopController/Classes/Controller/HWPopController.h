@@ -116,6 +116,9 @@ typedef NS_ENUM(NSInteger, HWDismissType) {
  */
 @property (nonatomic, assign) BOOL shouldDismissOnBackgroundTouch;
 
+/// Default is YES
+@property (nonatomic, assign) BOOL shouldAutoHandleKeyboardEvent;
+
 #pragma mark - readonly properties
 
 /**
